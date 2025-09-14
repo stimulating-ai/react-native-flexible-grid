@@ -1,6 +1,6 @@
 {
   "name": "react-native-flexible-grid",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "React Native Flexible Grid is an advanced grid layout system inspired by CSS Grid, designed to facilitate responsive, customizable, and dynamic grid layouts in React Native applications. It supports both responsive and fixed layouts, enabling the creation of intricate designs with minimal effort.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -26,7 +26,7 @@
     "example": "yarn workspace react-native-flexible-grid-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\" \"example/src/**/*.{js,ts,tsx}\" --fix",
     "clean": "del-cli lib",
     "prepare": "bob build"
   },
@@ -55,6 +55,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "@react-native/babel-preset": "^0.79.2",
     "@react-native/eslint-config": "^0.73.1",
     "@types/jest": "^29.5.5",
     "@types/react": "^18.2.44",
