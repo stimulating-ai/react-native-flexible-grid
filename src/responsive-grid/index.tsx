@@ -34,6 +34,7 @@ export const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   FooterComponent = null,
   direction = 'ltr',
   removeClippedSubviews = true,
+  refreshControl,
 }) => {
   const [visibleItems, setVisibleItems] = useState<TileItem[]>([]);
 
@@ -236,6 +237,7 @@ export const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
         }}
         showsVerticalScrollIndicator={showScrollIndicator}
         removeClippedSubviews={removeClippedSubviews}
+        refreshControl={refreshControl}
       >
         {/* Render HeaderComponent if provided */}
         <View

@@ -1,7 +1,7 @@
 import type React from 'react';
 import type { ReactNode } from 'react';
-import type { StyleProp, ViewStyle } from 'react-native';
-import type { ReanimatedScrollEvent } from 'react-native-reanimated/lib/typescript/hook/commonTypes';
+import type { StyleProp, ViewStyle, RefreshControlProps } from 'react-native';
+import type { ScrollEvent } from 'react-native-reanimated';
 
 interface RenderItemProps {
   item: any;
@@ -54,7 +54,7 @@ export interface ResponsiveGridProps {
   itemUnitHeight?: number;
 
   /** Callback function triggered when the scroll view is scrolled. */
-  onScroll?: (event: ReanimatedScrollEvent) => void;
+  onScroll?: (event: ScrollEvent) => void;
 
   /** Callback function triggered when the scroll reaches near the end of the scrollable grid. */
   onEndReached?: () => void;
@@ -88,6 +88,9 @@ export interface ResponsiveGridProps {
    * @default true
    */
   removeClippedSubviews?: boolean;
+
+  /** RefreshControl component for pull-to-refresh functionality. */
+  refreshControl?: React.ReactElement<RefreshControlProps>;
 }
 
 export interface TileItem {
