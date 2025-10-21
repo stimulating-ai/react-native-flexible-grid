@@ -24,6 +24,8 @@ export const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   showScrollIndicator = true,
   bounces = true,
   style = {},
+  contentInset,
+  contentOffset,
   itemContainerStyle = {},
   itemUnitHeight,
   onScroll: onScrollProp,
@@ -235,6 +237,8 @@ export const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
           height: sumScrollViewHeight || '100%',
           width: '100%',
         }}
+        contentInset={contentInset}
+        contentOffset={contentOffset}
         showsVerticalScrollIndicator={showScrollIndicator}
         removeClippedSubviews={removeClippedSubviews}
         refreshControl={refreshControl}

@@ -1,6 +1,12 @@
 import type React from 'react';
 import type { ReactNode } from 'react';
-import type { StyleProp, ViewStyle, RefreshControlProps } from 'react-native';
+import type {
+  StyleProp,
+  ViewStyle,
+  RefreshControlProps,
+  Insets,
+  PointProp,
+} from 'react-native';
 import type { ScrollEvent } from 'react-native-reanimated';
 
 interface RenderItemProps {
@@ -75,6 +81,10 @@ export interface ResponsiveGridProps {
     | React.ReactElement<any, string | React.JSXElementConstructor<any>>
     | null
     | undefined;
+
+  contentInset?: Insets | undefined;
+
+  contentOffset?: PointProp | undefined;
 
   /**
    * Determines the direction for arranging grid items in the layout: left-to-right (ltr) or right-to-left (rtl).
