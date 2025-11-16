@@ -44,6 +44,8 @@ export interface ResponsiveGridProps {
   /** Factor determining the size of the buffer for virtualization. A higher value preloads more off-screen items. Default is 5. */
   virtualizedBufferFactor?: number;
 
+  paddingHorizontal?: number;
+
   /** Controls the visibility of the scroll indicator. Default is true. */
   showScrollIndicator?: boolean;
 

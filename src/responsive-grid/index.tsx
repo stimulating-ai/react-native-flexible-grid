@@ -22,6 +22,7 @@ export const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   scrollEventInterval = 200, // milliseconds
   virtualization = true,
   showScrollIndicator = true,
+  paddingHorizontal = 0,
   bounces = true,
   style = {},
   contentInset,
@@ -224,7 +225,7 @@ export const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
       ]}
       onLayout={(event) => {
         const { width, height } = event.nativeEvent.layout;
-        setContainerSize({ width, height });
+        setContainerSize({ width: width - paddingHorizontal * 2, height });
       }}
     >
       <Animated.ScrollView
@@ -236,6 +237,7 @@ export const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
         contentContainerStyle={{
           height: sumScrollViewHeight || '100%',
           width: '100%',
+          paddingHorizontal: paddingHorizontal,
         }}
         contentInset={contentInset}
         contentOffset={contentOffset}
